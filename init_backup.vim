@@ -25,6 +25,7 @@ set splitright
 set foldopen-=block
 set hidden
 set undofile 
+set wildcharm=<Tab> "For command mode tab completion
 
 syntax enable
 filetype plugin indent on
@@ -62,6 +63,7 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'neovim/nvim-lspconfig'
 Plug 'L3MON4D3/LuaSnip'
 Plug 'saadparwaiz1/cmp_luasnip'
+Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
 " Plug 'nvie/vim-flake8'
 " Plug 'tpope/vim-fugitive'
 Plug 'psf/black', { 'branch': 'stable' }
@@ -73,7 +75,10 @@ Plug 'tpope/vim-surround'
 Plug 'lervag/vimtex'
 call plug#end()
 
-
+""""""""""""""""""""
+" Vim-Doge
+""""""""""""""""""""
+let g:doge_doc_standard_python = 'numpy'
 
 """"""""""""""""""""
 " Key Mappings
